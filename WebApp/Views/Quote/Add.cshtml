@@ -1,0 +1,16 @@
+﻿@model WebApp.Models.Quote
+
+@{
+    ViewData["Title"] = "Добавить цитату";
+}
+
+<h2>Добавить новую цитату</h2>
+<form asp-action="add" method="post">
+    <div>
+        <label asp-for="Text">Введите цитату</label>
+        <input asp-for="Text" />
+        <span asp-validation-for="Text"></span> @*ошибка если поле не заполнено*@
+    </div>
+    <button type="submit">Добавить цитату</button>
+</form>
+<p><button><a href="/">Вернутся на главную</a></button></p>
